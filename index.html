@@ -1,0 +1,739 @@
+<html>
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="js/jstween-1.1.min.js"></script>
+	<script src="js/calhist.js"></script>
+	
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="stylesheet" href="css/calhist.css" />
+</head>
+	
+<body>
+<!-- interactive map -->
+		<div id="mmap" class="twoColElsRtHdr">
+		<div class="hidden">
+		  <p>For best accessibility viewing turn off CSS and JavaScript.<br />
+		  <img src="images/valid_s_us508.gif" width="80" height="15" title="US 508 - Tested with Total Validator" alt="US 508 - Tested with Total Validator" />
+		  </p>
+		</div>
+		<div id="container">
+		
+		  <div id="header" align="center"> <a name="top" id="top"></a>
+		    <h1 class="pagetitle">Interactive Map</h1>
+		    <!-- end #header -->
+		  </div>
+		  <div id="sidebar1">
+		    <ul id="sidenav">
+                 
+		      <li><a href="#basetext" id="baselink">Base Map</a></li>
+		      <li><a id="soelink" href="#sitesofencanch">Sites of Encounter</a></li>
+		      <li><a id="aetclink" href="#aetclinkanch">Afro-Eurasian Trade Circles</a></li>
+		      <li><a id="physfeatures" href="#physfeaturesanch">Physical Features</a></li>
+		      <li><a id="windocean" href="#windoceananch">Wind and Ocean Currents</a></li>
+		      <li><a id="religions" href="#religionsanch">Religions</a></li>
+		      <li><a id="traderoutes" href="#traderoutesanch">Trade Routes</a></li>
+		      <li><a id="states1279" href="#states1279anch">States in 1279</a></li>
+		      <li><a id="states1491" href="#states1491anch">States in 1491</a></li>
+		      <li><a id="blackdeath" href="#blackdeathanch">Spread of the Black Death</a></li>
+		      <li><a id="marcopolo" href="#marcopoloanch">Voyages of Marco Polo and Ibn Battuta</a></li>
+		      <li><a id="citations" href="#citationsanch">Citations</a></li>
+		    </ul>
+		    <!-- end #sidebar1 -->
+		  </div>
+		  <div id="mainContent">
+		    <div align="center">
+		      <!-- hidden if JavaScript disabled -->
+		      <!--script type="text/javascript">
+		        
+		        document.write('<h2 id="imgTitle"></h2>');
+		        
+		      </script-->
+				<noscript><!-- this is here to hide empty content if JavaScript is turned off --></noscript>
+		    </div>
+		    <div id="citationdisplay"></div>
+		    <div id="rage_css_map">
+		      <div id="shapes">
+		        <!--div class="hidden"><h3>Base Map</h3></div-->
+                        <a name="base" id="base"></a>
+<div class="hidden"><h3>Base Map</h3></div><img id="basemap" src="images/base-map.png" alt="Base Map" title="Base Map" />
+		        <img id="basemap" src="images/base-map.png" alt="Base Map" title="Base Map" />
+		        <div id="basemaptext">
+		          <strong>Click on the name of each location for further information.</strong>
+		        </div>
+		        <ul id="city_list">
+		          <!-- Fancybox pop-ups -->
+		          <!-- Majorca -->
+				  
+		          <li>
+					<figure>
+					  <a id="rage_majorca" href="images/majorca.png" data-fancybox="fig" title="Majorca">
+					  </a>
+					  <figcaption class="hidden">
+					     <h3>Majorca</h3>
+					     <ul>
+					       <li><strong>Muslim-ruled island conquered by James I of Aragon (Spain) because of its trade potential</strong></li>
+					       <li><strong>Site where Genoese and Iberians experimented with ship technology and maps later used in the Atlantic</strong></li>
+					     </ul>
+					  </figcaption>
+					</figure>
+
+					
+		            <noscript><!-- this is here to hide duplicate content if JavaScript is turend off --></noscript>
+		            <!-- shows if CSS disabled -->
+		            <div class="hidden">
+		              <h3>Majorca</h3>
+		                <img src="images/majorca.png" alt="Majorca" title="Majorca" />
+		                <br />
+		                <ul>
+		                  <li><strong>Muslim-ruled island conquered by James I of Aragon (Spain) because of its trade potential</strong></li>
+		                  <li><strong>Site where Genoese and Iberians experimented with ship technology and maps later used in the Atlantic</strong></li>
+		                </ul>
+		            </div>
+		          </li>
+		          <!-- Sicily -->
+		          <li>
+					<figure>
+					  <a id="rage_sicily" href="images/sicily.png" data-fancybox="fig" title="Sicily">
+					  </a>
+					  <figcaption class="hidden">
+					    <h3>Sicily</h3>
+					    <ul>
+					      <li><strong>Multicultural kingdom of the Normans, descendants of Viking conquerors from Normandy, in France</strong></li>
+					      <li><strong>Arabic scientific and medical texts were translated here into Latin, so they could be shared with Western Europe</strong></li>
+					      <li><strong>On the borders of Christianity and Islam</strong></li>
+					    </ul>
+					  </figcaption>
+					</figure>
+
+					
+		            <noscript><!-- this is here to hide duplicate content if JavaScript is turend off --></noscript>
+		            <!-- shows if CSS disabled -->
+		            <div class="hidden">
+		              <h3>Sicily</h3>
+		                <img src="images/sicily.png" alt="Sicily" title="Sicily" />
+		                <br />
+		                <ul>
+		                  <li><strong>Multicultural kingdom of the Normans, descendants of Viking conquerors from Normandy, in France</strong></li>
+		                  <li><strong>Arabic scientific and medical texts were translated here into Latin, so they could be shared with Western Europe</strong></li>
+		                  <li><strong>On the borders of Christianity and Islam</strong></li>
+		                </ul>
+		            </div>
+		          </li>
+		          <!-- Cairo -->
+		          <li>
+					<figure>
+					  <a id="rage_cairo" href="images/cairo.png" data-fancybox="fig" title="Cairo">
+					  </a>
+					  <figcaption class="hidden">
+					    <h3>Cairo</h3>
+					    <ul>
+					      <li><strong>A major trade hub in the Islamic network for merchants and pilgrims on the Hajj</strong></li>
+					      <li><strong>Capital of the Mamluk Sultanate, a powerful state ruled by slave-soldiers</strong></li>
+					      <li><strong>&ldquo;Mother of cities and seat of Pharaoh the tyrant, mistress of broad provinces and fruitful lands, boundless in a multitude of buildings, peerless in beauty and splendor&rdquo; (Ibn Battuta)</strong></li>
+					    </ul>
+					  </figcaption>
+					</figure>
+
+					
+		            <noscript><!-- this is here to hide duplicate content if JavaScript is turend off --></noscript>
+		            <!-- shows if CSS disabled -->
+		            <div class="hidden">
+		              <h3>Cairo</h3>
+		                <img src="images/cairo.png" alt="Cairo" title="Cairo" />
+		                <br />
+		                <ul>
+		                  <li><strong>A major trade hub in the Islamic network for merchants and pilgrims on the Hajj</strong></li>
+		                  <li><strong>Capital of the Mamluk Sultanate, a powerful state ruled by slave-soldiers</strong></li>
+		                  <li><strong>“Mother of cities and seat of Pharaoh the tyrant, mistress of broad provinces and fruitful lands, boundless in a multitude of buildings, peerless in beauty and splendor” (Ibn Battuta)</strong></li>
+		                </ul>
+		            </div>
+		          </li>
+		          <!-- Mali -->
+		          <li>
+					<figure>
+					  <a id="rage_mali" href="images/mali.png" data-fancybox="fig" title="Mali">
+					  </a>
+					  <figcaption class="hidden">
+					    <h3>Mali</h3>
+   
+					    <ul>
+					      <li><strong>Wealthy empire and major source of gold for the medieval world</strong></li>
+					      <li><strong>Merchants and travelers traded salt for gold</strong></li>
+					      <li><strong>Center of Muslim religion and culture for West Africa</strong></li>
+					    </ul>
+					  </figcaption>
+					</figure>
+
+					
+		            <noscript><!-- this is here to hide duplicate content if JavaScript is turend off --></noscript>
+		            <!-- shows if CSS disabled -->
+		            <div class="hidden">
+		              <h3>Mali</h3>
+		                <img src="images/mali.png" alt="Mali" title="Mali" />
+		                <br />
+		                <ul>
+		                  <li><strong>Wealthy empire and major source of gold for the medieval world</strong></li>
+		                  <li><strong>Merchants and travelers traded salt for gold</strong></li>
+		                  <li><strong>Center of Muslim religion and culture for West Africa</strong></li>
+		                </ul>
+		            </div>
+		          </li>
+		          <!-- Calicut -->
+		          <li>
+					<figure>
+					  <a id="rage_calicut" href="images/calicut.png" data-fancybox="fig" title="Calicut">
+					  </a>
+					  <figcaption class="hidden">
+					    <h3>Calicut</h3>
+   
+					    <ul>
+					      <li><strong>A major trade city for the Indian Ocean</strong></li>
+					      <li><strong>Traders used the monsoon winds to exchange spices from the Southeast Asian islands with Chinese and Indian products and goods from the west</strong></li>
+					      <li><strong>Chinese, Hindu, Buddhist and Muslim cultural and religious influences spread to Southeast Asia along with this trade</strong></li>
+					    </ul>
+					  </figcaption>
+					</figure>
+
+					
+		            <noscript><!-- this is here to hide duplicate content if JavaScript is turend off --></noscript>
+		            <!-- shows if CSS disabled -->
+		            <div class="hidden">
+		              <h3>Calicut</h3>
+		                <img src="images/calicut.png" alt="Calicut" title="Calicut" />
+		                <br />
+		                <ul>
+		                  <li><strong>A major trade city for the Indian Ocean</strong></li>
+		                  <li><strong>Traders used the monsoon winds to exchange spices from the Southeast Asian islands with Chinese and Indian products and goods from the west</strong></li>
+		                  <li><strong>Chinese, Hindu, Buddhist and Muslim cultural and religious influences spread to Southeast Asia along with this trade</strong></li>
+		                </ul>
+		            </div>
+		          </li>
+		          <!-- Quanzhou -->
+		          <li>
+					<figure>
+					  <a id="rage_quanzhou" href="images/quanzhou.png" data-fancybox="fig" title="Quanzhou">
+					  </a>
+					  <figcaption class="hidden">
+					    <h3>Quanzhou</h3>
+   
+					    <ul>
+					      <li><strong>A major trade city for the Indian Ocean</strong></li>
+					      <li><strong>Traders used the monsoon winds to exchange spices from the Southeast Asian islands with Chinese and Indian products and goods from the west</strong></li>
+					      <li><strong>Chinese, Hindu, Buddhist and Muslim cultural and religious influences spread to Southeast Asia along with this trade</strong></li>
+					    </ul>
+					  </figcaption>
+					</figure>
+
+					
+		            <noscript><!-- this is here to hide duplicate content if JavaScript is turend off --></noscript>
+		            <!-- shows if CSS disabled -->
+		            <div class="hidden">
+		              <h3>Quanzhou</h3>
+		                <img src="images/quanzhou.png" alt="Quanzhou" title="Quanzhou" />
+		                <br />
+		                <ul>
+		                  <li><strong>One of the largest ports in the world (1100-1400)</strong></li>
+		                  <li><strong>“For every shipload of pepper that goes to Alexandria or elsewhere, headed for Christendom, at least one hundred or more, come to the port of Zayton [Quanzhou]” (Marco Polo)</strong></li>
+		                  <li><strong>Its medieval western name, “Zayton,” may be the origin of the word “satin”</strong></li>
+		                </ul>
+		            </div>
+		          </li>
+		      </ul>
+		      </div>
+		    </div>
+		    <div id="rage_css_map2">
+		      <div id="shapes2">
+		        <a name="aetclinkanch" id="aetclinkanch"></a>
+		        <img id="combomap" src="images/combo_maps.png" width="750" height="475" alt="Afro-Eurasian Trade Circles" title="Afro-Eurasian Trade Circles" />
+		        <!-- text for these links is in the "text for Afro-Eurasian Trade Circles" section below -->
+		        <!-- combomaptext div can be filled with html content too as the text for sites of encounter is done above
+		             ... use of paragraph tags is recommended -->
+		        <div id="combomaptext">
+		          <strong>Click on each trade circle for further information.</strong>
+		        </div>
+		        <ul id="circuit_list">
+		          <li><a href="#europeancircuit" id="rage_europeancircuit" title="European Circle"><span>European Circle</span></a></li>
+		          <li><a href="#mediterraneancircuit" id="rage_mediterraneancircuit" title="Mediterranean Circle"><span>Mediterranean Circle</span></a></li>
+		          <li><a href="#overlandcircuit" id="rage_overlandcircuit" title="Overland Circle"><span>Overland Circle</span></a></li>
+		          <li><a href="#persiangulfcircuit" id="rage_persiangulfcircuit" title="Persian Gulf Circle"><span>Persian Gulf Circle</span></a></li>
+		          <li><a href="#redseacircuit" id="rage_redseacircuit" title="Red Sea Circle"><span>Red Sea Circuit</span></a></li>
+		          <li><a href="#arabianseacircuit" id="rage_arabianseacircuit" title="Arabian Sea Circle"><span>Arabian Sea Circle</span></a></li>
+		          <li><a href="#india-southeastasiacircuit" id="rage_india-southeastasiacircuit" title="India-Southeast Asia Circle"><span>India-Southeast Asia Circle</span></a></li>
+		          <li><a href="#china-southeastasiacircuit" id="rage_china-southeastasiacircuit" title="China-Southeast Asia Circle"><span>China-Southeast Asia Circle</span></a></li>
+		          <li><a href="#trans-saharancircuit" id="rage_trans-saharancircuit" title="Trans-Saharan Circle"><span>Trans-Saharan Circle</span></a></li>
+		          <li><a href="#japan" id="rage_japancircuit" title="East Asian Circle"><span>East Asian Circle</span></a></li>
+		        </ul>
+		      </div>
+		    </div>
+		  <!-- store non-map images and text here here -->
+		  <!-- leave the text divs empty to hide them ... use of paragraph tags is recommended  -->
+                  
+
+		  <!-- Sites of Encounter -->
+		  <a name="sitesofencanch" id="sitesofencanch"></a>
+		  <div class="hidden"><h3>Sites of Encounter</h3></div>
+		  <img id="sitesofencimg" src="images/sites-of-ecnounter.png" width="750" height="475" alt="Sites of Encounter" title="Sites of Encounter" />
+
+		  <!-- put the text for this image here so will be under image with CSS disabled ... use of paragraph tags is recommended -->
+		  <div id="sitesofenctext"></div>
+		  <!-- Physical Features -->
+		  <a name="physfeaturesanch" id="physfeaturesanch"></a>
+		  <div class="hidden"><h3>Physical Features</h3></div>
+		  <img id="physmapimg" src="images/Physical.png" width="750" height="475" alt="Physical Features" title="Physical Features" />
+		  <div id="physfeaturestext"></div>
+		  <!-- Wind and Ocean Currents -->
+		  <a name="windoceananch" id="windoceananch"></a>
+		  <div class="hidden"><h3>Wind and Ocean Currents</h3></div>
+		  <img id="windoceanimg" src="images/Wind-Ocean-Currents.png" width="750" height="475" alt="Wind and Ocean Currents" title="Wind and Ocean Currents" />
+		  <div id="windoceantext"></div>
+		  <!-- Religions -->
+		  <a name="religionsanch" id="religionsanch"></a>
+		  <div class="hidden"><h3>Religions</h3></div>
+		  <img id="religionsimg" src="images/Religions.png" width="750" height="475" alt="Religions" title="Religions" />
+		  <div id="religionstext"></div>
+		  <!-- Trade Routes -->
+		  <a name="traderoutesanch" id="traderoutesanch"></a>
+		  <div class="hidden"><h3>Trade Routes</h3></div>
+		  <img id="traderoutesimg" src="images/trade-routes.png" width="750" height="475" alt="Trade Routes" title="Trade Routes" />
+		  <div id="traderoutestext"></div>
+		  <!-- States in 1279 -->
+		  <a name="states1279anch" id="states1279anch"></a>
+		  <div class="hidden"><h3>States in 1279</h3></div>
+		  <img id="states1279img" src="images/states-1279.png" width="750" height="475" alt="States in 1279" title="States in 1279" />
+		  <div id="states1279text"></div>
+		  <!-- States in 1491 -->
+		  <a name="states1491anch" id="states1491anch"></a>
+		  <div class="hidden"><h3>States in 1491</h3></div>
+		  <img id="states1491img" src="images/states-of-1491.png" width="750" height="475" alt="States in 1491" title="States in 1491" />
+		  <div id="states1491text"></div>
+		  <!-- Spread of the Black Death -->
+		  <a name="blackdeathanch" id="blackdeathanch"></a>
+		  <div class="hidden"><h3>Spread of the Black Death</h3></div>
+		  <img id="blackdeathimg" src="images/the-spread-of-the-black-death.png" width="750" height="475" alt="Spread of the Black Death" title="Spread of the Black Death" />
+		  <div id="blackdeathtext"></div>
+		  <!-- Voyages of Marco Polo and Ibn Buttuta -->
+		  <a name="marcopoloanch" id="marcopoloanch"></a>
+		  <div class="hidden"><h3>Voyages of Marco Polo and Ibn Buttuta</h3></div>
+		  <img id="marcopoloimg" src="images/Marco-Polo-and-Ibn-Battuta-Voyages.png" width="750" height="475" alt="Voyages of Marco Polo and Ibn Buttuta" title="Voyages of Marco Polo and Ibn Buttuta" />
+		  <div id="marcopolotext"></div>
+		  <!-- Citations -->
+		  <a name="citationsanch" id="citationsanch"></a>
+		  <div class="hidden"><h3>Citations</h3></div>
+		  <div id="citationtext">
+		    <p>Norman Castle, Erice, Sicily, photo by Alex Metcalfe,<em>The Medieval Mediterranean:
+		    Islamic and Norman Sicily (800-1200)</em>.
+		    Courtesy of Alex Metcalfe.</p>
+		    <p>Renshou Pagoda, the western of the twin towers of the Kaiyuan Temple, Quanzhou, Fujian,
+		    photograph by Tomchen, 2010.  Wikipedia Commons.<br />
+		    <a href="http://en.wikipedia.org/wiki/File:Kaiyuan_Temple_-_Renshou_Pagoda_-_DSCF8595.JPG">http://en.wikipedia.org/wiki/File:Kaiyuan_Temple_-_Renshou_Pagoda_-_DSCF8595.JPG</a>.</p>
+		    <p>Al-Azhar Mosque, Cairo, Egypt, photograph by Daniel Mayer, 2008.  Wikipedia Commons.<br />
+		    <a href="http://en.wikipedia.org/wiki/File:Cairo_-_Islamic_district_-_Al_Azhar_Mosque_and_University.JPG">http://en.wikipedia.org/wiki/File:Cairo_-_Islamic_district_-_Al_Azhar_Mosque_and_University.JPG</a>.</p>
+		    <p>Great Mosque of Djenné (Jenne), photo by Andy Gilham, uploaded by Jcarriker and used with the permission
+		    of Andy Gilham of www.andygilham.com, Wikipedia Commons,<br />
+		    <a href="http://en.wikipedia.org/wiki/File:Great_Mosque_of_Djenn%C3%A9_1.jpg">http://en.wikipedia.org/wiki/File:Great_Mosque_of_Djenné_1.jpg</a>.</p>
+		    <p>Bellver Castle, Palma de Mallorca, Spain, photograph by Ponio160, 2007.  Wikipedia Commons,<br />
+		    <a href="http://en.wikipedia.org/wiki/File:Castillo_de_Bellver.jpg">http://en.wikipedia.org/wiki/File:Castillo_de_Bellver.jpg</a>.</p>
+		    <p>Gangaikondacolapuram Temple, Chola Dynasty, Thanjavur, Tamil Nadu, India.  Photograph by Benjamín Preciado,
+		    Centro de Estudios de Asia y África de El Colegio de México, Wikipedia Commons,<br />
+		    <a href="http://en.wikipedia.org/wiki/File:Gangaikonda_Gopuram_5-10a.jpg">http://en.wikipedia.org/wiki/File:Gangaikonda_Gopuram_5-10a.jpg</a>.</p>
+		  </div>
+		  <!-- End store non-map images and text here here -->
+
+		<!-- End store images here -->
+		    <!-- end #mainContent -->
+		    <div id="theText"></div>
+		  </div>
+		  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+		  <br class="clearfloat" />
+		  <div id="footer">
+		    <!-- <p id="footerText"></p> -->
+		    <p id="footerLink" align="center"><a href="#top" title="Back To Top">Back To Top</a></p>
+		    <!-- end #footer -->
+		  </div>
+		  <!-- end #container -->
+		</div>
+       <!-- end of mapbody -->
+ 
+               <!-- text for Afro-Eurasian Trade Circles -->
+<!-- European Circuit -->
+<div id="european-circuit"> <a name="europeancircuit" id="europeancircuit"></a>
+  <h3>Circle I: European Circle</h3>
+  <p><strong>Description:</strong>
+    The European circle was the poorest and least developed circle in the 13th century, because there
+    were not many products from Europe that the Muslims, Indians or Chinese wanted to buy. The Europeans,
+    on the other hand, were hungry for luxury products from Asia. The first important trade link was
+    established between Venice and Genoa in northern Italy and Brugesin Flanders. The merchants traveled
+    overland and met halfway at fairs in Champagne during the 13th century. There they exchanged the fine
+    wool cloth made in Flanders for the imported goods from Asia. In the 14th century, the Genoese
+    and Catalans figured out how to navigate through the difficult wind pattern at the Strait of
+    Gibraltar (the exit of the Mediterranean Sea into the Atlantic Ocean) and then began sailing from
+    Genoa to Bruges. From the trade city at Bruges, merchants spread the imported products all over
+    northern Europe.</p>
+  <p><strong>Main trade cities:</strong>
+    Bruges, Venice, Genoa</p>
+  <p><strong>Products imported:</strong>
+    cloves, mace, nutmeg, cinnamon, ginger (from Southeast Asia &amp; India), ebony chessmen (from
+    Indo-China); perfumes (from Madagascar, Tibet, Arabia), jewels (from India), silk, muslin and
+    brocade (from Persia, China and India), gold and ivory (West Africa), porcelain (from China).</p>
+  <p><strong>Products exported:</strong>
+    wool cloth (from Flanders), slaves, furs, and silver. Merchants traded grain, wool, fish, wine, and
+    copper from one area of Europe to another.</p>
+  <p><strong>Major shippers:</strong>
+    Venetian, Genoese, Catalan and Hanseatic (German) shippers; merchants from Flanders, Venice and
+    Genoa; Catalan &amp; Hanseatic merchants after the mid-13th century.</p>
+  <p><strong>Method of Travel:</strong>
+    Overland packtrains (lines of horses, donkeys or wagons loaded with products) in 13th century;
+    Atlantic galleys and cogs in the 14th century.</p>
+  <p><strong>Important States:</strong>
+    Venice, Genoa, Florence (Italian city-states), France, Crown of Aragon, Castile, Flanders, Holy
+    Roman Empire, England</p>
+  <p><strong>People:</strong>
+    European Christians, French, Germans, Italians, Spanish, Flemish, Catalan, English</p>
+</div>
+<!-- Mediterranean Circuit -->
+<div id="mediterranean-circuit"> <a name="mediterraneancircuit" id="mediterraneancircuit"></a>
+  <h3>Circle II: Mediterranean Circle</h3>
+  <p><strong>Description:</strong>
+    Ships from the Italian city-states of Venice and Genoa picked up the products of Asia (spices, silk,
+    jewels) from Muslim and Jewish merchants at ports on the eastern coast of the Mediterranean Sea or
+    on the Black Sea. The Venetians and Genoese sold wool cloth, slaves, furs and silver made or
+    collected in Europe to Muslim or Jewish merchants. The Venetians and Genoese then sold the Asian
+    products to wealthy people in Europe. During the Crusades, Latin Christian crusaders conquered
+    Mediterranean ports which were at the end of the Silk Road trade routes, such as Acre and Tyre. The
+    crusaders gave the Venetians and Genoese, their fellow Latin Christians, trading rights at those
+    ports. After 1291, when Baybars of the Mamluk Sultanate (Egypt) defeated the last of the crusaders,
+    the Venetians moved their businesses to trade at Alexandria and Cairo, and the Genoese moved their
+    businesses to Caffa (on the north shore of the Black Sea.) All of these ports were at the end of
+    land trade routes from the east. North African Muslim merchants also sold gold (from Mali) at Cairo
+    and other North African ports.</p>
+  <p><strong>Main trade cities:</strong>
+    Alexandria, Cairo, Constantinople, Venice, Genoa, Caffa</p>
+  <p><strong>Products imported:</strong>
+    cloves, mace, nutmeg, cinnamon, ginger (from India and Southeast Asia), ebony chessmen (from
+    Indo-China); perfumes (Madagascar, Tibet, Arabia), jewels (from India), silk, muslin and brocade
+    (from Persia, China and India), porcelain (from China), gold and ivory (West Africa)</p>
+  <p><strong>Products exported:</strong>
+    slaves (from the Mongol steppe), silver and precious metals, wood and furs (from Russia and
+    Scandinavia), wool cloth (from Flanders)</p>
+  <p><strong>Major shippers:</strong>
+    Venetian, Genoese and Catalan shippers; merchants from Venice and Genoa, later Catalan (in the Crown
+    of Aragon, Spain) and Karimi merchants from Egypt, Jewish and Muslim Arab and North African merchants</p>
+  <p><strong>Method of Travel:</strong>
+    Mediterranean galleys (wide, shallow ships rowed by slaves); cogs(sailing ships with two or three
+    decks, and four to six lateen sails)</p>
+  <p><strong>Important States:</strong>
+    Mamluk Egypt, Venice, Genoa, Crown of Aragon, Byzantine Empire</p>
+  <p><strong>People:</strong>
+    North Africans (Maghribi), Egyptians, Syrians/Palestinian Arabs, Kurds, Turks, Byzantine Greeks,
+    Italians (Venetians, Genoese, Sicilians, etc.), Catalans, French</p>
+</div>
+<!-- Overland Circuit -->
+<div id="overland-circuit"> <a name="overlandcircuit" id="overlandcircuit"></a>
+  <h3>Circle III: Overland Circle</h3>
+  <p><strong>Description:</strong>
+    This route, part of which is the Silk Road, had been traveled for more than a thousand years before
+    the medieval period. The land of Central Asia is mostly desert, steppe or mountains, and few people
+    lived along the route. Finding water was a major problem, and bandits often robbed caravans. For
+    these reasons, the land route was more dangerous and expensive than the sea routes between the
+    Mediterranean and Indian Oceans and had become much less popular than Circles IV (the Persian Gulf
+    circle) and V (the Red Sea circle.) When the Mongols conquered their huge empire, the new Mongol
+    rulers got rid of dangerous bandits, protected caravans, and established peace. Merchants had to pay
+    the Mongols tribute (like a tax), but this tribute was less than others charged. The Mongols also
+    maintained a road network, with caravanserais (businesses which provided shelter, food and water for
+    caravan merchants and their animals) at each stopping point. Mongol rule made the overland route to
+    the east more cost-effective. Marco Polo and his relatives traveled this route on their journey to
+    China, and John of Montecorvino, an Italian Franciscan missionary, wrote that it took less than one
+    year to travel between the Mediterranean and China by this route. When the Mongol empire broke up in
+    the 14th century, bandits again threatened merchants on the overland route, and merchants switched
+    back to the safer sea routes.</p>
+  <p><strong>Main trade cities:</strong>
+    Constantinople, Caffa, Tabriz, Samarkand, Bukhara, Beijing</p>
+  <p><strong>Products imported:</strong>
+    [Many products from China and East Asia were transported through this circuit to be sold in other
+    circuits.] paper, silk (from China), spices (from India and Southeast Asia)</p>
+  <p><strong>Products exported:</strong>
+    slaves, gold, silver, copper</p>
+  <p><strong>Major shippers:</strong>
+    Central Asian, Persian, Jewish, Turkish and European merchants</p>
+  <p><strong>Method of travel:</strong>
+    Groups of merchants traveled together in caravans of camels (across desert areas), packhorses or
+    mules (across mountains) and wagons.</p>
+  <p><strong>Important States:</strong>
+    Mongol Empire/kingdoms (Khanate of the Golden Horde, Il-Khan Empire, Empire of Chagatai, Empire of
+    the Great Khan [Yuan China]), Byzantine Empire</p>
+  <p><strong>People:</strong>Mongols, Turks, Central Asian nomads, Muslim, Christian and Jewish merchants</p>
+</div>
+<!-- Persian Gulf Circuit -->
+<div id="persian-gulf-circuit"> <a name="persiangulfcircuit" id="persiangulfcircuit"></a>
+  <h3>Circle IV: Persian Gulf Circle</h3>
+  <p><strong>Description:</strong>
+    This circle was one of three trade routes that connected the Mediterranean Sea area with the Indian
+    Ocean and east Asia. The trade route began at the Syrian ports on the eastern coast (also called the
+    Levant) of the Mediterranean Sea. Before 1280, these ports were controlled by Venice, because they
+    were located in the Crusader kingdoms. Even though they were sometimes at war with each other,
+    Muslim and Christian states signed treaties to protect each other’s merchants and their goods.
+    Traveling inland from the port, merchants crossed the desert to the Tigris River and then took ship
+    down the river to Baghdad. From there, merchants traveled down the river to the Persian Gulf, and
+    across the Arabian Sea to India to northwest India (Gujarat), the Malabar coast and/or Ceylon. John
+    of Montecorvino, an Italian Franciscan missionary, wrote that it took 2 years to travel from the
+    Mediterranean to China by this route. After the Mongols destroyed Baghdad in 1258 and the Egyptian
+    Mamluks took over the Crusader kingdoms in 1291, this route became less safe and less popular than
+    the Red Sea Circuit. The Mamluks no longer allowed Christian merchants to travel across Muslim lands.</p>
+  <p><strong>Main trade cities:</strong>
+    Tyre, Acre, Baghdad, Oman</p>
+  <p><strong>Products Imported:</strong>
+    [Many products from China and East Asia were transported through this circle to be sold in other
+    circles.] silk, paper (from China), spices, jewels (from India and Southeast Asia), silver, slaves
+    (from Europe and Mongol lands), drugs, perfumes, saffron, teakwood, ivory, pearls, onyx, rubies,
+    ebony, sugar, aloes, iron, lead, canes, earthenware, sandalwood, glass, and pepper (according to
+    Muhammad al-Muqaddasi, a geographer born in Jerusalem in 945).</p>
+  <p><strong>Products exported:</strong>
+    cotton, sugar, carpets, silk, linen, brocade (cloth of gold), steel, swords, pearls, dates, henna</p>
+  <p><strong>Major shippers:</strong>
+    Arab, Persian, and Indian shippers; Muslim and Jewish merchants from Egypt, Syria, and Persia. The
+    sources usually call these shippers and merchants “Arabs,” but they probably came from many
+    different lands, such as Persia, India, Southeast Asia, and east Africa.</p>
+  <p><strong>Method of travel:</strong>
+    Over land, merchants traveled together in caravans of camels, horses and mules.  On the seas and
+    rivers, shippers used dhows (small trading ships with lateen sails)</p>
+  <p><strong>Important States:</strong>
+    Mongol Il-Khanate, Crusader Kingdoms, Mamluk Egypt, Turkish sultanates, Persia</p>
+  <p><strong>People:</strong>
+    Arabs, Syrians, Persians, Turks, Indians, Venetians, Genoese</p>
+</div>
+<!-- Red Sea Circuit -->
+<div id="red-sea-circuit"> <a name="redseacircuit" id="redseacircuit"></a>
+  <h3>Circle V: Red Sea Circle</h3>
+  <p><strong>Description:</strong> This circuit was one of the three middle routes between the Mediterranean and East Asia.  After the fall of
+    Baghdad in 1258 and the Crusader kingdoms in 1291, Mamluk Egypt became the most powerful state in the western Muslim world.
+    The Mamluks were a dynasty of slave-soldiers.  Non-Muslims from Central Asia were sold into slavery as young boys, carried to
+    Cairo on Genoese ships, and trained as soldiers by older Mamluk slave-soldiers.  Talented Mamluk slaves could rise to become
+    officials in the Mamluk government.  When the old sultan died, an experienced and powerful slave-general became the new sultan.
+    Merchants came from the Egyptian population and were both Muslim and Jewish.  The greatest Muslim Mamluk traders, known as the
+    Karimi merchants, monopolized the trade of Asian products into the Mediterranean and Europe.  Travel decreased along the other
+    two middle routes (circuits III and IV), and Venetian and Genoese merchants came to Cairo to get products from the east in
+    exchange for slaves from Europe and the Mongol steppe.  To protect their monopoly  on trade, the Mamluks did not allow Venetian,
+    Genoese, or any other Christian merchants to sail south and east of Cairo.</p>
+  <p><strong>Main trade cities:</strong>
+    Cairo, Alexandria, Aden</p>
+  <p><strong>Products imported:</strong>
+    [Many products from China and East Asia were transported through this circuit to be sold in other
+    circuits.] slaves (from Europe and Central Asia), paper, ebony, coconuts (from China and India),
+    metals (from Europe), spices (from southeast Asia), black pepper, cotton cloth, jewels (from India),
+    porcelain and silk (from China)</p>
+  <p><strong>Products exported:</strong>
+    papyrus paper, carpets, cotton and linen cloth, glassware, hawks, and sugar. In Cairo there were
+    many workshops that manufactured goods such as swords and armor, leather objects, furniture, paper
+    and cloth.</p>
+  <p><strong>Major Shippers:</strong>
+    Venetian, Genoese, Arab, Persian and Indian shippers; Karimi merchants (private Egyptian Muslim
+    merchants), Jewish, Muslim and Christian merchants from Venice, Genoa, Egypt, Syria, Persia </p>
+  <p><strong>Method of Travel:</strong>
+    Boats could sail from the Arabian Sea into the Red Sea and then take a canal over to the Nile River
+    at Cairo. They could then sail up the Nile to the Mediterranean Sea. Italian ships sailed to
+    Alexandria in convoys (large groups of ships sailing together.)</p>
+  <p><strong>Important States:</strong>
+    Mamluk Sultanate (Egypt)</p>
+  <p><strong>People:</strong>
+  Mamluks, Arabs, Venetians, Genoese, Syrians, Yemenese</p>
+</div>
+<!-- Arabian Sea Circuit -->
+<div id="arabian-sea-circuit"> <a name="arabianseacircuit" id="arabianseacircuit"></a>
+  <h3>Circle VI: Arabian Sea Circle</h3>
+  <p><strong>Description:</strong>
+    This circle is one of the oldest trade routes in world history. Ships have been crossing it for the
+    last 4,000 years. This Arabian Sea circle depended on the monsoon winds. The only other way to sail
+    from India to Arabia was to sail along the coast, which took much more time. Because ships had to
+    delay six months to a year to wait for the right monsoon winds, merchants and shippers set up homes
+    and communities in Indian ports, such as Cambay (in Gujarat), Quilon or Calicut (on the Malabar
+    coast). They intermarried with local Indians and depended on family members and people who had come
+    from their own home towns to do business. The sources identify these people as Muslims, even though
+    they probably came from different ethnic groups and religions (some were Jewish or Hindu). Although
+    north-central India was united in the Delhi Sultanate (1206-1526), the rest of India was divided
+    into small kingdoms and city-states with local rulers. In this circle there was no one dominant
+    state controlling trade. Inside there were lots of smaller states and a common culture that valued
+    trade connections and business. All shippers and merchants respected the right of other ships to
+    travel and trade in the circle, except there were many pirates who attacked ships.</p>
+  <p><strong>Main trade cities:</strong>
+    Aden, Hormuz, Cambay, Quilon, Calicut</p>
+  <p><strong>Products imported:</strong>
+    Silk, porcelain and manufactured luxury goods (from China), glassware (from the Mediterranean),
+    spices, perfumes (from Southeast Asia) metals, armor, weapons, perfumes (from Egypt, Arabia and
+    Persia), and slaves (from East Africa and the Mongol steppe). Unlike some other circles, here ships
+    carried many more ordinary bulk items, such as metal utensils, weapons, grain, sugar, butter, salt,
+    dried food, horses and lumber, from one place to another within this circle. This means that there
+    was much more dependence on trade networks in this circle.</p>
+  <p><strong>Products exported:</strong>
+    Cotton cloth, pepper, jewels (from India), silk and cotton cloth (from Egypt and Persia)</p>
+  <p><strong>Major shippers:</strong>
+    Arab, Persian, Indian and Southeast Asian shippers; Karimi merchants (from Mamluk Egypt), Jewish,
+    Arab, Persian, Indian and Chinese merchants. The sources identify the shippers and merchants as
+    “Arabs” or “Muslims”, but some were probably East African, Persian, Javan,
+    Chinese, or Filipino.</p>
+  <p><strong>Method of travel:</strong>
+    The two types of ships used in this circle were junks and dhows. Ships sailed in convoys, following
+    the monsoon sailing seasons. A ship could sail from west to east across this circle from February to
+    May and from mid-August to the end of September. A ship could also sail down the east coast of
+    Africa (the Swahili Coast) to Kilwa and other ports during this monsoon season. A ship could sail
+    from east to west (and north from Africa) from mid-October to mid-April. See the monsoon maps and
+    tables for more information.</p>
+  <p><strong>Important States:</strong>
+    Mamluk Egypt, Persia, Delhi Sultanate</p>
+  <p><strong>People:</strong>
+    Arabs, Egyptians, Persians, East Africans, Indians</p>
+</div>
+<!-- India-Southeast Asia Circuit -->
+<div id="india-southeast-asia-circuit"> <a name="india-southeastasiacircuit" id="india-southeastasiacircuit"></a>
+  <h3>Circle VII: India-Southeast Asia Circuit</h3>
+  <p><strong>Description:</strong>
+    Trade in this circle depended on the monsoon winds. In addition, ships had to sail through the
+    narrow Strait of Malacca to go from the Bay of Bengal into the South China Sea. Because ships had to
+    delay six months to a year to wait for the right monsoon winds, merchants and shippers set up homes
+    and communities in ports on the Coromandel coast (southeast India), the Malay peninsula, and the
+    Southeast Asian islands. Merchants from China, Southeast Asia, India, Persia and Arabia intermarried
+    with local people and depended on family members and people who had come from their own home towns
+    to do business. These merchants carried their religions, beliefs and customs with them and gradually
+    spread those to the local communities. The biggest cultural influence from 1000 through 1300 was the
+    Hindu religion and south Indian culture, but Buddhism, Chinese culture, and later the Muslim
+    religion were also influential. All of the land regions of this circle were divided into small
+    states or smaller village communities. Those towns and states that were on the coast depended on sea
+    trade for local trade and luxuries. Their rulers looked to India and China as powerful cultures that
+    could give them power and prestige. Chinese naval fleets, under Zheng He and other commanders, often
+    sailed throughout this circle. Shippers and merchants respected the right of other ships to travel
+    and trade in the circle, except there were pirates, especially in the Strait of Malacca.</p>
+  <p><strong>Main trade cities:</strong>
+    Palembang (Srivijaya), Malacca (after 1430), Quilon, Calicut</p>
+  <p><strong>Products imported:</strong>
+    Silk, porcelain and manufactured goods (from China), silk and cotton cloth (from Egypt and Persia),
+    horses and glassware (from the Mediterranean), metals, armor, weapons, perfumes (from Egypt, Arabia
+    and Persia), and slaves (from East Africa and the Mongol steppe)</p>
+  <p><strong>Products exported:</strong>
+    Cotton cloth (from India), spices, black pepper, ginger, cinnamon, cardemom, cloves, nutmeg, pearls,
+    coral, betelnuts, aromatics (camphor, sandalwood), dyes, medicines, tropical wood, resin (from
+    Sumatra)</p>
+  <p><strong>Major Shippers:</strong>
+    Arab, Persian, , Indian, Malay, Sumatran, Tamil (from the Chola kingdom and Coromandel), Javan and
+    Chinese shippers and merchants. The sources identify the merchants as “Arabs”,
+    “Muslims” or Chinese, but some were probably East African, Persian, Vietnamese, Javan,
+    Malaysian, or Filipino.</p>
+  <p><strong>Method of Travel:</strong>
+    The two types of ships used in this circle were junks and dhows. Ships sailed in convoys, following
+    the monsoon sailing seasons. A ship could sail from west to east across this circle from February
+    to May and from mid-August to the end of September. It could also sail south to the islands. A ship
+    could sail from east to west (and north from the islands) from mid-October to mid-April. The wind
+    patterns changed at the Strait of Malacca, and ships had to time their arrival there between
+    December and mid-February if they were going from China to India. Sailing around the southern tip of
+    India and Ceylon was very difficult. See the monsoon maps and tables for more information.</p>
+  <p><strong>Important States:</strong>
+    Chola kingdom (Coromandel coast), Srivijaya, China, Khmer (Angkor)</p>
+  <p><strong>People:</strong>
+    Malay, Sumatran, Javan, Chinese, Indian, Arab, Cambodian, Vietnamese</p>
+</div>
+<!-- China-Southeast Asia Circuit -->
+<div id="china-southeast-asia-circuit"> <a name="china-southeastasiacircuit" id="china-southeastasiacircuit"></a>
+  <h3>Circle VIII: China-Southeast Asia Circle</h3>
+  <p><strong>Description:</strong>
+    The empire of China was the most powerful state in the medieval world, and it dominated this
+    circuit. Chinese naval fleets dominated the smaller kingdoms of Southeast Asia and took tribute from
+    them for the Chinese emperor. The Chinese usually did not want to conquer lands, but they wanted the
+    leaders of Southeast Asian states, such as Champa and Srivijaya, to acknowledge Chinese superiority
+    and authority. Early Ming emperors sent out large naval fleets to extend Chinese power. From 1405 to
+    1433, Admiral Zheng He commanded seven huge fleets which explored the near Pacific islands,
+    Southeast Asia, and the Indian Ocean, collected tribute and rare items, and spread Chinese
+    authority. Because of threats on the northern border and the great cost of the voyages, a new
+    emperor and his administration ended the voyages in 1433 and abandoned the Chinese fleet. Private
+    Chinese merchants continued to sail and trade. The Chinese government allowed foreign merchants to
+    trade in Chinese ports, especially Guangzhou, Hangzhou and Quanzhou. Main trade cities: Guangzhou,
+    Hangzhou, Quanzhou, Palembang, Malacca (after 1430</p>
+  <p><strong>Products imported:</strong>
+    black pepper, cotton textiles, pearls, horses (from India), ambergris, frankincense and glassware
+    (from Arabia, the Mediterranean, or east Africa), spices, sandalwood and tortoiseshells (from
+    Southeast Asia to China), silk, porcelain, iron products (from China to Southeast Asia)</p>
+  <p><strong>Products exported:</strong>
+    porcelain, silk, manufactured luxury goods, tea, cotton, sugar, cannons, coins, paper (from China),
+    spices, aromatics, tropical woods (from Southeast Asia), rice, swords, timber, medicines (from the
+    Philippines)</p>
+  <p><strong>Major shippers:</strong>
+    Arab, Persian, Indian, Southeast Asian and Chinese shippers; merchants from China, Arabia, Persia,
+    and India; Muslim, Jewish and a few Christian (Italian) merchants</p>
+  <p><strong>Method of travel:</strong>
+    Most travel in this circuit was by sea using junks, first made in China, but later also made in
+    Southeast Asian ports. Ships followed the monsoon sailing seasons to travel between China and the
+    southern islands. From the seaports, merchants carried the trade goods inland throughout China.
+    These merchants traveled by boat on rivers and canals, and by packtrain over land.</p>
+  <p><strong>Important States:</strong>
+    China (under the Song, Yuan, and Ming dynasties), the Mongol Empire</p>
+  <p><strong>People:</strong>
+    Chinese, Filipinos, Annamese, Javans, Sumatrans, Arabs, Persians, Indians</p>
+</div>
+<!-- Trans-Saharan Circuit -->
+<div id="trans-saharan-circuit"> <a name="trans-saharancircuit" id="trans-saharancircuit"></a>
+  <h3>Circle IX: Trans-Saharan Circle</h3>
+  <p><strong>Description: </strong>
+    This circle connected the north coast of Africa (the Maghrib towns in the west and Cairo in the
+    east) with the gold region of West Africa. The merchants (who came from North Africa) had to cross
+    the Sahara Desert by going from oasis to oasis. The merchants carried salt from the northern Sahara
+    to southern gold region, which did not have enough salt for the people who lived there. Merchants
+    probably also carried cotton cloth, luxury silks, spices, and manufactured goods from Mamluk Egypt
+    and Asia. In addition to gold, those merchants bought ivory and slaves from African merchants. The
+    Muslim religion spread along with the merchants.  Many people in West Africa converted to Islam. The
+    biggest kingdom in West Africa from the 12th to the 15th centuries was Mali. Genoese and Catalan
+    merchants traveled to north African ports to buy gold, but the Muslim merchants of the Maghrib would
+    not let them travel south across the Sahara. This was one reason why the Portuguese began sailing
+    into the eastern Atlantic and down the coast of Africa in the 15th century.</p>
+  <p><strong>Major trade cities:</strong>
+    Sijilmasa, Cairo, Tunis, Timbuktu, Jenne</p>
+  <p><strong>Products imported:</strong>
+    Salt, luxury goods, horses, slaves, silk, spices</p>
+  <p><strong>Products exported:</strong>
+    Gold, ivory, slaves</p>
+  <p><strong>Major Shippers:</strong>
+    Arab and Berber Muslim merchants</p>
+  <p><strong>Method of Travel:</strong>
+    This circle was mostly desert. Caravans of merchants crossed it riding camels. They traveled from
+    oasis to oasis, led by experienced guides.</p>
+  <p><strong>Important States:</strong>
+    Mali, Mamluk Sultanate</p>
+  <p><strong>People:</strong>
+    Arabs, Maghribis, Egyptians, Berbers (from north Africa), West Africans</p>
+</div>
+<!-- Japan Circuit? (there doesn't seem to be content or title for this one yet) -->
+<div id="japan-circ"> <a name="japan" id="japan"></a>
+  <h3>Circle X: East Asian Circle</h3>
+  <p><strong>Description:</strong>
+    From the 600s, Korea, Japan and China traded with each other.  The Tang dynasty rulers of China
+    invaded the Silla kingdom in Korea and made it into a vassal state of the Chinese empire.  The Silla
+    and Goryeo (918-1392) kingdoms in Korea had a tributary relationship with China.  This meant that
+    they gave tribute to the emperor and received gifts from him.  They could also trade with China.
+    Chinese culture deeply influenced both Korea and Japan.  During the Heian dynasty (794-1185),
+    Japanese leaders read Chinese literature and copied Chinese styles. During the Medieval period in
+    Japan (1185-1573) trade between China and Japan grew enormously.</p>
+  <p><strong>Major trade cities:</strong>
+    Quanzhou, Mingzhou, Hangzhou, Nagasaki</p>
+  <p><strong>Products imported:</strong>
+    cloves, mace, nutmeg, cinnamon, ginger, tropical wood, pearls, betelnuts, aromatics (camphor,
+    sandalwood) (from Southeast Asia and India) dyes, medicines, resin (from Sumatra), copper (from
+    Japan to China), horses (from Korea to China)</p>
+  <p><strong>Products exported:</strong>
+    silk, porcelain, iron products, manufactured luxury goods, tea, cotton, sugar, cannons, paper (from
+    China), copper coins (from China to Japan and Korea), swords, copper, silver, hides (from Japan),
+    horses (from Korea to China)</p>
+  <p><strong>Major shippers:</strong>
+    Arab, Persian, Indian, and Southeast Asian shippers; Korean, Chinese, Japanese, Arab, Persian,
+    Indian, and Southeast Asian merchants</p>
+  <p><strong>Method of travel:</strong>
+    Shippers used junks to sail between China and the Japanese and Korean ports.  From the seaports,
+    merchants carried the trade good inland through China, Japan, Korea and the islands.  These
+    merchants traveled by boat on rivers and by packtrain over land.</p>
+  <p><strong>Important states:</strong>
+    China (under the Song, Yuan, and Ming dynasties), Silla kingdom, Goryeo kingdom (both in Korea) Japan</p>
+  <p><strong>People:</strong>
+    Chinese, Japanese, Koreans, Arabs, Persians, Indians, Southeast Asians</p>
+</div>
+</body>
+</html>
+<!-- End text for Afro-Eurasian Trade Circles -->
+                
+      
